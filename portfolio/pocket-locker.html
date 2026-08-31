@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pocket Locker | Kier Mariquit</title>
+
+  <meta
+    name="description"
+    content="Pocket Locker — a functional personal finance tracking system built by Kier Mariquit."
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .project-hero {
+      padding: 90px 0 70px;
+      background: var(--color-white);
+    }
+
+    .project-back {
+      display: inline-block;
+      margin-bottom: 35px;
+      color: var(--color-blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .project-back:hover {
+      text-decoration: underline;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--color-blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      max-width: 850px;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
+    }
+
+    .project-intro {
+      max-width: 780px;
+      color: var(--color-text-soft);
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .project-section {
+      padding: 75px 0;
+    }
+
+    .project-section-heading {
+      max-width: 780px;
+      margin-bottom: 35px;
+    }
+
+    .project-section-heading h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .project-section-heading p {
+      color: var(--color-text-soft);
+      line-height: 1.7;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 28px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .project-card p {
+      color: var(--color-text-soft);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .feature-number {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--color-blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .workflow-step {
+      padding: 22px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .workflow-step strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .workflow-step span {
+      color: var(--color-text-soft);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .screen-placeholder {
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: var(--color-background);
+      border: 1px dashed var(--color-border);
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .screen-placeholder strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .screen-placeholder span {
+      color: var(--color-text-soft);
+      font-size: 14px;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .tools-list li {
+      padding: 9px 13px;
+      background: var(--color-background);
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .project-highlight {
+      padding: 35px;
+      background: var(--color-navy);
+      color: var(--color-white);
+      border-radius: var(--radius-lg);
+    }
+
+    .project-highlight h2 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .project-highlight p {
+      max-width: 800px;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .status-box {
+      padding: 25px;
+      border-left: 4px solid var(--color-blue);
+      background: var(--color-background);
+      border-radius: var(--radius-sm);
+    }
+
+    .status-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .status-box p {
+      margin: 0;
+      color: var(--color-text-soft);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 750px) {
+      .project-grid,
+      .workflow,
+      .screens-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==============================
+       NAVIGATION
+       ============================== -->
+
+  <header class="site-nav">
+
+    <div class="container nav-inner">
+
+      <a href="../index.html" class="brand">
+        <span class="brand-name">KIER MARIQUIT</span>
+        <span class="brand-role">Operations & Automation</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="../index.html#ecommerce">E-Commerce</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==============================
+         PROJECT HERO
+         ============================== -->
+
+    <section class="project-hero">
+
+      <div class="container">
+
+        <a
+          href="../index.html#portfolio"
+          class="project-back"
+        >
+          ← Back to Portfolio
+        </a>
+
+        <p class="project-tag">
+          Portfolio Project 03
+        </p>
+
+        <h1 class="project-title">
+          Pocket Locker
+        </h1>
+
+        <p class="project-intro">
+          A functional personal finance tracking system I built to
+          organize personal, business, and side finances in one
+          connected workspace.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         OVERVIEW
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            01 — Overview
+          </p>
+
+          <h2>
+            One workspace for financial tracking
+          </h2>
+
+          <p>
+            Pocket Locker was created to help me track different
+            areas of my finances, including expenses, income,
+            savings, borrowing, lending, and other transactions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         WHY I BUILT IT
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            02 — Why I Built It
+          </p>
+
+          <h2>
+            Built around the way I manage money
+          </h2>
+
+          <p>
+            I initially built Pocket Locker because I wanted to
+            track my finances across personal activities as well
+            as business and side activities, while also keeping
+            savings connected to the same tracking system.
+          </p>
+
+          <p>
+            As I continued developing it, I added ideas based on
+            situations I personally encountered, including
+            tracking people involved in shared or split expenses.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CORE FEATURES
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            03 — Core Features
+          </p>
+
+          <h2>
+            What Pocket Locker currently tracks
+          </h2>
+
+        </div>
+
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <span class="feature-number">01</span>
+            <h3>Expense Tracking</h3>
+            <p>
+              Records and organizes expenses through a dedicated
+              input and tracking area.
+            </p>
+          </article>
+
+
+          <article class="project-card">
+            <span class="feature-number">02</span>
+            <h3>Income & Savings</h3>
+            <p>
+              Keeps income and savings information connected to
+              the overall financial tracking system.
+            </p>
+          </article>
+
+
+          <article class="project-card">
+            <span class="feature-number">03</span>
+            <h3>Borrow & Lend</h3>
+            <p>
+              Tracks financial transactions involving money
+              borrowed or lent to other people.
+            </p>
+          </article>
+
+
+          <article class="project-card">
+            <span class="feature-number">04</span>
+            <h3>Payment Status</h3>
+            <p>
+              Supports tracking of partial, overdue, and updated
+              payment situations within borrowing and lending records.
+            </p>
+          </article>
+
+
+          <article class="project-card">
+            <span class="feature-number">05</span>
+            <h3>Shared Expenses</h3>
+            <p>
+              Includes ideas for tracking people involved in
+              shared or split expenses based on real situations.
+            </p>
+          </article>
+
+
+          <article class="project-card">
+            <span class="feature-number">06</span>
+            <h3>Financial Analytics</h3>
+            <p>
+              Provides an analytics area to help visualize and
+              review financial information.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         WORKFLOW
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            04 — Workflow
+          </p>
+
+          <h2>
+            From transaction input to financial insight
+          </h2>
+
+          <p>
+            The system brings different financial activities
+            together so they can be recorded, organized, reviewed,
+            and analyzed from one place.
+          </p>
+
+        </div>
+
+
+        <div class="workflow">
+
+          <div class="workflow-step">
+            <strong>01 — Record</strong>
+            <span>
+              Enter an income, expense, savings activity,
+              or other financial transaction.
+            </span>
+          </div>
+
+          <div class="workflow-step">
+            <strong>02 — Organize</strong>
+            <span>
+              Associate the transaction with the relevant
+              category, person, or financial activity.
+            </span>
+          </div>
+
+          <div class="workflow-step">
+            <strong>03 — Track</strong>
+            <span>
+              Monitor outstanding, partial, overdue, or
+              updated transactions where applicable.
+            </span>
+          </div>
+
+          <div class="workflow-step">
+            <strong>04 — Review</strong>
+            <span>
+              Use the dashboard to review the current
+              financial information.
+            </span>
+          </div>
+
+          <div class="workflow-step">
+            <strong>05 — Analyze</strong>
+            <span>
+              Use the analytics area to understand
+              financial activity.
+            </span>
+          </div>
+
+          <div class="workflow-step">
+            <strong>06 — Improve</strong>
+            <span>
+              Continue developing the system based on
+              actual financial tracking needs.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         SCREENSHOTS
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            05 — Evidence
+          </p>
+
+          <h2>
+            Inside Pocket Locker
+          </h2>
+
+          <p>
+            The following areas are documented in the project
+            presentation and will be used as visual evidence
+            of the system.
+          </p>
+
+        </div>
+
+
+        <div class="screens-grid">
+
+          <div class="screen-placeholder">
+            <div>
+              <strong>Main Dashboard</strong>
+              <span>
+                Dashboard view showing the overall financial workspace.
+              </span>
+            </div>
+          </div>
+
+
+          <div class="screen-placeholder">
+            <div>
+              <strong>Expense Input</strong>
+              <span>
+                Interface used to record financial expenses.
+              </span>
+            </div>
+          </div>
+
+
+          <div class="screen-placeholder">
+            <div>
+              <strong>Income & Savings</strong>
+              <span>
+                Tracking area for income and savings information.
+              </span>
+            </div>
+          </div>
+
+
+          <div class="screen-placeholder">
+            <div>
+              <strong>Borrow & Lend</strong>
+              <span>
+                Tracking area for borrowing, lending, and payment status.
+              </span>
+            </div>
+          </div>
+
+
+          <div class="screen-placeholder">
+            <div>
+              <strong>Partial / Overdue Tracking</strong>
+              <span>
+                View for monitoring payment situations.
+              </span>
+            </div>
+          </div>
+
+
+          <div class="screen-placeholder">
+            <div>
+              <strong>Analytics</strong>
+              <span>
+                Financial analytics and review area.
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         TOOLS
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            06 — Tools & Approach
+          </p>
+
+          <h2>
+            Built as a practical personal system
+          </h2>
+
+          <p>
+            Pocket Locker is a personal project focused on
+            practical organization and financial tracking.
+            The portfolio will document the actual technologies
+            used once the project implementation is finalized
+            and verified.
+          </p>
+
+        </div>
+
+        <ul class="tools-list">
+
+          <li>Personal Project</li>
+          <li>Financial Tracking</li>
+          <li>Dashboard</li>
+          <li>Data Organization</li>
+          <li>Analytics</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CURRENT STATUS
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            07 — Current Status
+          </p>
+
+          <h2>
+            Functional and still evolving
+          </h2>
+
+        </div>
+
+
+        <div class="status-box">
+
+          <strong>
+            Current status: Functional / Under Continued Development
+          </strong>
+
+          <p>
+            Pocket Locker is currently functional, but it is not
+            completely finalized. I continue to refine the system
+            and develop ideas based on additional financial
+            tracking needs and real-world use.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         WHAT IT DEMONSTRATES
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-highlight">
+
+          <h2>
+            What this project demonstrates
+          </h2>
+
+          <p>
+            Pocket Locker demonstrates my approach to building
+            practical systems around real problems. Instead of
+            starting with technology alone, I started with how
+            I personally needed to organize financial information,
+            then developed the system around those requirements.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         RETURN
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="button-group">
+
+          <a
+            href="../index.html#portfolio"
+            class="button button-primary"
+          >
+            ← Back to Portfolio
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <p>
+        Kier Mariquit | Operations & Automation
+      </p>
+
+      <p>
+        Understand. Improve. Automate.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
