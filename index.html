@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kier Mariquit | Operations & Automation</title>
+
+  <meta
+    name="description"
+    content="Kier Mariquit | Operations & Automation — Business Operations, Process Improvement, Automation, Payroll & Finance Operations, and E-Commerce."
+  >
+
+  <style>
+    :root {
+      --navy: #0b1220;
+      --blue: #2563eb;
+      --slate: #475569;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 7%;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--slate);
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+      padding: 80px 7%;
+      background: var(--white);
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: clamp(25px, 4vw, 42px);
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--slate);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid var(--border);
+      color: var(--navy);
+      background: white;
+    }
+
+    .workflow {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--light);
+    }
+
+    .workflow h3 {
+      margin-bottom: 25px;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      color: var(--slate);
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--slate);
+      font-size: 15px;
+    }
+
+    .dark {
+      background: var(--navy);
+      color: white;
+    }
+
+    .dark .section-intro {
+      color: #cbd5e1;
+    }
+
+    footer {
+      padding: 30px 7%;
+      background: var(--navy);
+      color: #cbd5e1;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        align-items: flex-start;
+      }
+
+      nav div:last-child {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="brand">
+      KIER MARIQUIT
+      <span>Operations & Automation</span>
+    </div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#ecommerce">E-Commerce</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+
+      <div>
+        <div class="eyebrow">
+          BUSINESS OPERATIONS • PROCESS IMPROVEMENT • AUTOMATION
+        </div>
+
+        <h1>Kier Mariquit</h1>
+
+        <h2>Operations & Automation</h2>
+
+        <p>
+          Business operations professional focused on process improvement,
+          payroll and finance operations, automation, and practical digital systems.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#portfolio">View My Work</a>
+          <a class="button secondary" href="#contact">Let's Connect</a>
+        </div>
+
+        <p style="margin-top:25px; font-size:14px;">
+          <strong>Understand. Improve. Automate.</strong>
+        </p>
+      </div>
+
+      <div class="workflow">
+        <h3>My Approach</h3>
+
+        <div class="step">01 — Understand</div>
+        <div class="step">02 — Improve</div>
+        <div class="step">03 — Automate</div>
+        <div class="step">04 — Deliver Results</div>
+      </div>
+
+    </section>
+
+
+    <section id="about">
+
+      <h2 class="section-title">About Kier</h2>
+
+      <p class="section-intro">
+        I am a Business Operations & Process Improvement Specialist with
+        hands-on experience in Cost Management, payroll and finance operations,
+        documentation validation, process coordination, and automation.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Operations</h3>
+          <p>
+            Payroll, Mobilization Fund, invoice validation,
+            documentation, reporting and coordination.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Process Improvement</h3>
+          <p>
+            Building structured workflows, tracking systems
+            and practical improvements to repetitive processes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Automation</h3>
+          <p>
+            Connecting forms, spreadsheets, cloud storage,
+            email and scripts to reduce repetitive work.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="experience" class="dark">
+
+      <h2 class="section-title">Professional Experience</h2>
+
+      <p class="section-intro">
+        Cost Management Specialist with continuous experience supporting
+        operational, payroll, financial documentation and Mobilization Fund
+        processes.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Payroll & Finance</h3>
+          <p>
+            Payroll processing, financial/document validation,
+            invoice validation and BIR 2307 documentation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Mobilization Fund</h3>
+          <p>
+            Supporting the process from requirements and validation
+            through processing, monitoring and crediting.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Cross-Functional Support</h3>
+          <p>
+            Coordination with Sales, HR, Finance and internal
+            stakeholders regarding requirements and processes.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="portfolio">
+
+      <h2 class="section-title">Selected Work</h2>
+
+      <p class="section-intro">
+        Practical systems developed from real operational problems
+        and personal projects.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>01 — BIR 2307 Automation</h3>
+          <p>
+            Workflow concept connecting requests, spreadsheet tracking,
+            document checking, Drive-based files and automated Gmail responses.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>02 — Registration System</h3>
+          <p>
+            Event registration system with guest validation,
+            registration monitoring, duplicate prevention and category tracking.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>03 — Pocket Locker</h3>
+          <p>
+            Functional personal finance prototype for expenses,
+            income, savings, borrowing, lending and analytics.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="ecommerce" class="dark">
+
+      <h2 class="section-title">E-Commerce Operations</h2>
+
+      <p class="section-intro">
+        Hands-on experience independently operating a Shopee-based
+        online business, including product management, customer operations,
+        fulfillment, promotions and sales monitoring.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Product Management</h3>
+          <p>
+            Product listings, images, titles, descriptions,
+            categories, variations and inventory.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Order & Customer Operations</h3>
+          <p>
+            Order processing, packing, shipping coordination,
+            customer inquiries, complaints and returns.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Sales & Promotions</h3>
+          <p>
+            Pricing evaluation, vouchers, bundle promotions,
+            GMV monitoring and sales analysis.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="contact">
+
+      <h2 class="section-title">Let's Connect</h2>
+
+      <p class="section-intro">
+        Interested in discussing an opportunity, collaboration,
+        or project?
+      </p>
+
+      <div class="buttons">
+        <a
+          class="button primary"
+          href="https://www.linkedin.com/in/martjareik"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          class="button secondary"
+          href="mailto:martjareik@gmail.com"
+        >
+          Email Me
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Kier Mariquit | Operations & Automation
+    <br>
+    Understand. Improve. Automate.
+    <br><br>
+    © 2026 Kier Mariquit
+  </footer>
+
+</body>
+</html>
