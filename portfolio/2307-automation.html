@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BIR 2307 Automation | Kier Mariquit</title>
+
+  <meta
+    name="description"
+    content="BIR 2307 workflow automation project by Kier Mariquit."
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .project-hero {
+      padding: 90px 0 70px;
+      background: var(--color-white);
+    }
+
+    .project-back {
+      display: inline-block;
+      margin-bottom: 35px;
+      color: var(--color-blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .project-back:hover {
+      text-decoration: underline;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--color-blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      max-width: 850px;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
+    }
+
+    .project-intro {
+      max-width: 760px;
+      color: var(--color-text-soft);
+      font-size: 19px;
+    }
+
+    .project-section {
+      padding: 75px 0;
+    }
+
+    .project-section-heading {
+      max-width: 760px;
+      margin-bottom: 35px;
+    }
+
+    .project-section-heading h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .project-section-heading p {
+      color: var(--color-text-soft);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 28px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .project-card p {
+      color: var(--color-text-soft);
+      font-size: 15px;
+    }
+
+    .workflow-diagram {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .workflow-box {
+      padding: 14px 18px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .workflow-arrow {
+      color: var(--color-blue);
+      font-weight: 800;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .tools-list li {
+      padding: 9px 13px;
+      background: var(--color-background);
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .project-highlight {
+      padding: 35px;
+      background: var(--color-navy);
+      color: var(--color-white);
+      border-radius: var(--radius-lg);
+    }
+
+    .project-highlight h2 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .project-highlight p {
+      max-width: 800px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 750px) {
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-arrow {
+        display: none;
+      }
+
+      .workflow-diagram {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .workflow-box {
+        text-align: center;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==============================
+       NAVIGATION
+       ============================== -->
+
+  <header class="site-nav">
+
+    <div class="container nav-inner">
+
+      <a href="../index.html" class="brand">
+        <span class="brand-name">KIER MARIQUIT</span>
+        <span class="brand-role">Operations & Automation</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="../index.html#ecommerce">E-Commerce</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==============================
+         PROJECT HERO
+         ============================== -->
+
+    <section class="project-hero">
+
+      <div class="container">
+
+        <a
+          href="../index.html#portfolio"
+          class="project-back"
+        >
+          ← Back to Portfolio
+        </a>
+
+        <p class="project-tag">
+          Portfolio Project 01
+        </p>
+
+        <h1 class="project-title">
+          BIR 2307 Automation
+        </h1>
+
+        <p class="project-intro">
+          A workflow automation concept developed to reduce repetitive
+          activities involved in request handling, document checking,
+          tracking, and response coordination.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         PROJECT OVERVIEW
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <h2>
+            The Problem
+          </h2>
+
+          <p>
+            Repetitive document-related requests can require multiple
+            manual steps, including receiving requests, checking files,
+            updating trackers, locating documents, and responding to
+            requestors.
+          </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+          <article class="project-card">
+
+            <h3>
+              Repetitive Tracking
+            </h3>
+
+            <p>
+              Request status needed to be monitored and updated
+              consistently to determine which items had already
+              been processed.
+            </p>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <h3>
+              Document Checking
+            </h3>
+
+            <p>
+              Supporting documents needed to be located and checked
+              against the request before the next process step.
+            </p>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <h3>
+              Response Handling
+            </h3>
+
+            <p>
+              Request-related communication could involve repetitive
+              email responses and status updates.
+            </p>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <h3>
+              Multiple Platforms
+            </h3>
+
+            <p>
+              The workflow involved information moving between forms,
+              spreadsheets, cloud storage, scripts, and email.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         SOLUTION
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            The Solution
+          </p>
+
+          <h2>
+            Connected workflow automation
+          </h2>
+
+          <p>
+            I designed a workflow that connects the request,
+            tracking, document, and communication stages into
+            a more structured process.
+          </p>
+
+        </div>
+
+
+        <div class="workflow-diagram">
+
+          <div class="workflow-box">
+            Google Forms
+          </div>
+
+          <span class="workflow-arrow">→</span>
+
+          <div class="workflow-box">
+            Google Sheets
+          </div>
+
+          <span class="workflow-arrow">→</span>
+
+          <div class="workflow-box">
+            Status Tracking
+          </div>
+
+          <span class="workflow-arrow">→</span>
+
+          <div class="workflow-box">
+            Google Drive
+          </div>
+
+          <span class="workflow-arrow">→</span>
+
+          <div class="workflow-box">
+            Apps Script
+          </div>
+
+          <span class="workflow-arrow">→</span>
+
+          <div class="workflow-box">
+            Gmail Response
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         MY ROLE
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            My Role
+          </p>
+
+          <h2>
+            From operational requirement to workflow
+          </h2>
+
+          <p>
+            The project was developed from my understanding of the
+            actual operational process and the repetitive activities
+            involved in handling requests.
+          </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+          <article class="project-card">
+
+            <h3>
+              Process Understanding
+            </h3>
+
+            <p>
+              I mapped the operational steps and identified activities
+              that could be structured or automated.
+            </p>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <h3>
+              Workflow Design
+            </h3>
+
+            <p>
+              I structured the connection between request submission,
+              tracking, document checking, and response handling.
+            </p>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <h3>
+              Automation Logic
+            </h3>
+
+            <p>
+              I used Apps Script and spreadsheet logic to support
+              status checking and workflow triggers.
+            </p>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <h3>
+              Operational Testing
+            </h3>
+
+            <p>
+              The workflow was developed around real operational
+              requirements rather than as a purely theoretical exercise.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         TOOLS
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            Tools
+          </p>
+
+          <h2>
+            Technologies used
+          </h2>
+
+        </div>
+
+
+        <ul class="tools-list">
+
+          <li>Google Forms</li>
+          <li>Google Sheets</li>
+          <li>Google Drive</li>
+          <li>Gmail</li>
+          <li>Google Apps Script</li>
+          <li>JavaScript</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         OUTCOME
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-highlight">
+
+          <h2>
+            What this project demonstrates
+          </h2>
+
+          <p>
+            This project demonstrates how I approach automation:
+            first understanding the operational process, then
+            identifying repetitive work, connecting the relevant
+            tools, and building a workflow that supports more
+            consistent tracking and response handling.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         NEXT PROJECTS
+         ============================== -->
+
+    <section class="project-section">
+
+      <div class="container">
+
+        <div class="project-section-heading">
+
+          <p class="section-label">
+            More Projects
+          </p>
+
+          <h2>
+            Continue exploring
+          </h2>
+
+        </div>
+
+
+        <div class="button-group">
+
+          <a
+            href="registration-system.html"
+            class="button button-primary"
+          >
+            Registration System →
+          </a>
+
+          <a
+            href="../index.html#portfolio"
+            class="button button-secondary"
+          >
+            Back to Portfolio
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <p>
+        Kier Mariquit | Operations & Automation
+      </p>
+
+      <p>
+        Understand. Improve. Automate.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
